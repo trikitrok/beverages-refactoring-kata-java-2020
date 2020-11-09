@@ -1,6 +1,6 @@
-package beverages.menu;
+package coffee_shop.menu.builders;
 
-import beverages.Beverage;
+import coffee_shop.Beverage;
 
 public interface CoffeeBuilder {
     Beverage make();

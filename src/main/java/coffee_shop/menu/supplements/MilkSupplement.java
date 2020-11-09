@@ -1,7 +1,6 @@
-package beverages.menu.supplements;
+package coffee_shop.menu.supplements;
 
-import beverages.Beverage;
-import beverages.Supplement;
+import coffee_shop.Beverage;
 
 public class MilkSupplement implements Supplement {
     @Override

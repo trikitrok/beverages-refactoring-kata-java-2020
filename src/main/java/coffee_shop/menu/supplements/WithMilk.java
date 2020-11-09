@@ -1,6 +1,6 @@
-package beverages.menu.supplements;
+package coffee_shop.menu.supplements;
 
-import beverages.Beverage;
+import coffee_shop.Beverage;
 
 public class WithMilk implements Beverage {
     private final Beverage beverage;

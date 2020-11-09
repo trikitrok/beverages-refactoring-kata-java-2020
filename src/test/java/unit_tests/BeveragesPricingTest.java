@@ -1,14 +1,13 @@
 package unit_tests;
 
-import beverages.*;
-
-import beverages.menu.BeverageMachine;
 import org.junit.Assert;
 import org.junit.Test;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.closeTo;
+
+import coffee_shop.Beverage;
+import coffee_shop.BeverageMachine;
 
 public class BeveragesPricingTest {
     @Test

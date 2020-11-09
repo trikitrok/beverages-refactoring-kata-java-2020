@@ -1,19 +1,19 @@
-package beverages.menu;
+package coffee_shop.menu.builders;
 
-import beverages.Beverage;
-import beverages.Supplement;
-import beverages.menu.supplements.CinnamonSupplement;
-import beverages.menu.supplements.CreamSupplement;
-import beverages.menu.supplements.MilkSupplement;
+import coffee_shop.Beverage;
+import coffee_shop.menu.supplements.Supplement;
+import coffee_shop.menu.supplements.CinnamonSupplement;
+import coffee_shop.menu.supplements.CreamSupplement;
+import coffee_shop.menu.supplements.MilkSupplement;
 
 import java.util.ArrayList;
 import java.util.List;
 
-class BeverageBuilder implements TeaBuilder, HotChocolateBuilder, CoffeeBuilder {
+public class BeverageBuilder implements TeaBuilder, HotChocolateBuilder, CoffeeBuilder {
     private List<Supplement> supplements;
     private Beverage beverage;
 
-    BeverageBuilder(Beverage beverage) {
+    public BeverageBuilder(Beverage beverage) {
         this.beverage = beverage;
         supplements = new ArrayList<>();
     }
