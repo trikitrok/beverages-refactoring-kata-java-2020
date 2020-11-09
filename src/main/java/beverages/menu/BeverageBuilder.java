@@ -9,7 +9,7 @@ import beverages.menu.supplements.MilkSupplement;
 import java.util.ArrayList;
 import java.util.List;
 
-class BeverageBuilder {
+class BeverageBuilder implements TeaBuilder, HotChocolateBuilder, CoffeeBuilder {
     private List<Supplement> supplements;
     private Beverage beverage;
 
@@ -18,7 +18,7 @@ class BeverageBuilder {
         supplements = new ArrayList<>();
     }
 
-    Beverage make() {
+    public Beverage make() {
         Beverage beverage = this.beverage;
         for (Supplement supplement: supplements) {
             beverage = supplement.add(beverage);
@@ -26,17 +26,17 @@ class BeverageBuilder {
         return beverage;
     }
 
-    BeverageBuilder withMilk() {
+    public BeverageBuilder withMilk() {
         supplements.add(new MilkSupplement());
         return this;
     }
 
-    BeverageBuilder withCinnamon() {
+    public BeverageBuilder withCinnamon() {
         supplements.add(new CinnamonSupplement());
         return this;
     }
 
-    BeverageBuilder withCream() {
+    public BeverageBuilder withCream() {
         supplements.add(new CreamSupplement());
         return this;
     }
