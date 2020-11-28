@@ -10,10 +10,13 @@ import coffee_shop.Beverage;
 import coffee_shop.BeverageMachine;
 
 public class BeveragesPricingTest {
+
+    private static final double PRECISION = 0.001;
+
     @Test
     public void computes_coffee_price() {
         Beverage coffee = BeverageMachine.coffee().make();
-        assertThat(coffee.price(), is(closeTo(1.20, 0.001)));
+        assertThat(coffee.price(), is(closeTo(1.20, PRECISION)));
     }
 
     @Test
