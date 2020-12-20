@@ -1,4 +1,4 @@
-package coffee_shop.menu.builders;
+package coffee_shop.menu.beverages_machine;
 
 import coffee_shop.Beverage;
 

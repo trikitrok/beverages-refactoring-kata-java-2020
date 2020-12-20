@@ -1,6 +1,9 @@
-package coffee_shop.menu.builders;
+package coffee_shop.menu.beverages_machine;
 
 import coffee_shop.Beverage;
+import coffee_shop.menu.beverages.Coffee;
+import coffee_shop.menu.beverages.HotChocolate;
+import coffee_shop.menu.beverages.Tea;
 import coffee_shop.menu.supplements.Supplement;
 import coffee_shop.menu.supplements.CinnamonSupplement;
 import coffee_shop.menu.supplements.CreamSupplement;
@@ -9,11 +12,23 @@ import coffee_shop.menu.supplements.MilkSupplement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BeverageBuilder implements TeaBuilder, HotChocolateBuilder, CoffeeBuilder {
+public class BeverageMachine implements TeaBuilder, HotChocolateBuilder, CoffeeBuilder {
     private List<Supplement> supplements;
     private Beverage beverage;
 
-    public BeverageBuilder(Beverage beverage) {
+    public static CoffeeBuilder coffee() {
+        return new BeverageMachine(new Coffee());
+    }
+
+    public static TeaBuilder tea() {
+        return new BeverageMachine(new Tea());
+    }
+
+    public static HotChocolateBuilder hotChocolate() {
+        return new BeverageMachine(new HotChocolate());
+    }
+
+    private BeverageMachine(Beverage beverage) {
         this.beverage = beverage;
         supplements = new ArrayList<>();
     }
@@ -26,17 +41,17 @@ public class BeverageBuilder implements TeaBuilder, HotChocolateBuilder, CoffeeB
         return beverage;
     }
 
-    public BeverageBuilder withMilk() {
+    public BeverageMachine withMilk() {
         supplements.add(new MilkSupplement());
         return this;
     }
 
-    public BeverageBuilder withCinnamon() {
+    public BeverageMachine withCinnamon() {
         supplements.add(new CinnamonSupplement());
         return this;
     }
 
-    public BeverageBuilder withCream() {
+    public BeverageMachine withCream() {
         supplements.add(new CreamSupplement());
         return this;
     }

@@ -7,7 +7,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.closeTo;
 
 import coffee_shop.Beverage;
-import coffee_shop.BeverageMachine;
+import coffee_shop.menu.beverages_machine.BeverageMachine;
 
 public class BeveragesPricingTest {
 
