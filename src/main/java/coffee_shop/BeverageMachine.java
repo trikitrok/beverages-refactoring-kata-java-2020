@@ -1,9 +1,11 @@
-package coffee_shop.menu.beverages_machine;
+package coffee_shop;
 
-import coffee_shop.Beverage;
 import coffee_shop.menu.beverages.Coffee;
 import coffee_shop.menu.beverages.HotChocolate;
 import coffee_shop.menu.beverages.Tea;
+import coffee_shop.menu.beverages_builders.CoffeeBuilder;
+import coffee_shop.menu.beverages_builders.HotChocolateBuilder;
+import coffee_shop.menu.beverages_builders.TeaBuilder;
 import coffee_shop.menu.supplements.WithCinnamon;
 import coffee_shop.menu.supplements.WithCream;
 import coffee_shop.menu.supplements.WithMilk;
