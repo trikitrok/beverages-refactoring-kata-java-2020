@@ -2,10 +2,10 @@ package coffee_shop.menu.supplements;
 
 import coffee_shop.Beverage;
 
-public class WithCream implements Beverage {
+class WithCream implements Beverage {
     private Beverage beverage;
 
-    public WithCream(Beverage beverage) {
+    WithCream(Beverage beverage) {
         this.beverage = beverage;
     }
 
