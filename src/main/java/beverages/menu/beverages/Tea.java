@@ -1,4 +1,6 @@
-package beverages;
+package beverages.menu.beverages;
+
+import beverages.Beverage;
 
 public class Tea implements Beverage {
     @Override

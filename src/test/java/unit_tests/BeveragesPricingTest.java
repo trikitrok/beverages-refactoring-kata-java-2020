@@ -2,7 +2,7 @@ package unit_tests;
 
 import beverages.*;
 
-import beverages.menu.BeverageMachine;
+import beverages.BeverageMachine;
 import org.junit.Assert;
 import org.junit.Test;
 
